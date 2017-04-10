@@ -1,0 +1,8 @@
+export const name = 'Joel Bandi'
+export const occupation = 'Software Developer'
+export const location = 'Santa Barbara City'
+export const company = 'company'
+export const githubUserName = 'joelbandi'
+export const linkedinUserName = 'joelbandi'
+export const web = 'https://joelbandi.github.io'
+export const email = 'joelvivekbandi@gmail.com'
