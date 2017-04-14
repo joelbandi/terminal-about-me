@@ -1,6 +1,7 @@
-var webpack = require('webpack');
-var path = require('path');
-var htmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
+const path = require('path');
+const htmlWebpackPlugin = require('html-webpack-plugin');
+const extractTextPlugin = require('extract-text-webpack-plugin');
 
 const VENDOR_LIBS = [
   'lodash',
@@ -10,7 +11,7 @@ const VENDOR_LIBS = [
   'react-redux',
 ]
 
-var config = {
+const config = {
   entry: {
     bundle: './src/index.js',
     vendor: VENDOR_LIBS,
@@ -26,6 +27,14 @@ var config = {
         test: /\.jsx?$/,
         exclude: /node_modules/
       },
+      {
+        // use: ['style-loader','css-loader'],
+        loader: extractTextPlugin.extract({
+          loader: ['css-loader','sass-loader']
+        }),
+        test: /\.s?css$/,
+        exclude: /node_modules/
+      },
     ]
   },
   plugins: [
@@ -35,6 +44,9 @@ var config = {
     new htmlWebpackPlugin({
       template: './index.html'
     }),
+    new extractTextPlugin({
+      filename:'[name].[chunkhash].css'
+    })
   ],
   devServer: {
     historyApiFallback: true,

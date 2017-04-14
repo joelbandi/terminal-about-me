@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connectModule } from 'redux-modules'
 import module from '../module';
-
+import '../style.scss';
 
 @connectModule(module)
 class App extends Component {
