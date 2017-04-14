@@ -30,7 +30,12 @@ const config = {
       {
         // use: ['style-loader','css-loader'],
         loader: extractTextPlugin.extract({
-          loader: ['css-loader','sass-loader']
+          loader: [{
+            loader: 'css-loader',
+          },
+          {
+            loader: 'sass-loader',
+          }],
         }),
         test: /\.s?css$/,
         exclude: /node_modules/
