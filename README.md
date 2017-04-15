@@ -14,7 +14,7 @@
 1. Visit `/src/module.js` and follow step1 and step2 in the comments.
 2. Put all your constants in `src/data.js` and export it from there.
 
-See demo here -> [exciting-phatal.surge.sh](http://exciting-phatal.surge.sh/)
+See demo here -> [quaint-term.surge.sh](http://quaint-term.surge.sh/)
 ---
 
 Happy Coding :heart:
