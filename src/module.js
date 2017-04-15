@@ -52,8 +52,8 @@ const actions = {
 
   showIntro: () => {
     store.dispatch(module.actions.addHistory(`intro`));
-    store.dispatch(module.actions.addHistory(`Hello, I'm ${name}, a ${occupation} currently working in ${company} in the beautiful ${location}`));
-    store.dispatch(module.actions.addHistory(`Type 'help' to see what all commands are available`));
+    store.dispatch(module.actions.addHistory(`Hello, I'm ${name}, a ${occupation} currently working in ${company} in the beautiful ${location}.`));
+    store.dispatch(module.actions.addHistory(`Type 'help' to see all available commands.`));
   },
 
 
