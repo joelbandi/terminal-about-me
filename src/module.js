@@ -27,7 +27,7 @@ const actions = {
   openLink: (cmd,link) => {
     
     return () => {
-      store.dispatch(module.actions.addHistory(cmd));
+      store.dispatch(module.actions.addHistory(`user@localhost:~$${cmd}`));
       window ? window.open(link, '_blank') : '';
     }
   },
@@ -39,7 +39,7 @@ const actions = {
 
 
   showHelp: () => {
-    store.dispatch(module.actions.addHistory('help'));
+    store.dispatch(module.actions.addHistory('user@localhost:~$ help'));
     store.dispatch(module.actions.addHistory('help - this help text'));
     store.dispatch(module.actions.addHistory("github - view my github profile"));
     store.dispatch(module.actions.addHistory("source - browse the code for this page"));

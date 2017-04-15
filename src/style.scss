@@ -1,7 +1,97 @@
-$font-stack:    Helvetica, sans-serif;
-$primary-color: #333;
+//colors
+$color_pickled_bluewood_approx: #2b3d50;
+$black: #000;
+$white: #fff;
+$green: #00ff00;
+$color_alto_approx: #dad9d9;
+$color_cinnabar_approx: #e94b35;
+$color_turbo_approx: #f0f000;
+$color_green_haze_approx: #1aaf5c;
+
+//fonts
+$font_0: monospace;
 
 body {
-  font: 100% $font-stack;
-  color: $primary-color;
+	background-color: $color_pickled_bluewood_approx;
 }
+#head {
+	font-family: $font_0;
+	color: $white;
+	margin: auto;
+	padding: 35px;
+	font-size: 40px;
+	text-align: center;
+}
+#bar {
+	text-align: center;
+	width: 750px;
+	height: 25px;
+	background-color: $color_alto_approx;
+	margin: 0 auto;
+	font-family: $font_0;
+	padding: 5px;
+	float: none;
+	border-radius: 5px;
+}
+#red {
+	background-color: $color_cinnabar_approx;
+	border-radius: 100%;
+	width: 15px;
+	height: 15px;
+	margin: 0 auto;
+	left: -47%;
+	bottom: -20%;
+	position: relative;
+}
+#yellow {
+	background-color: $color_turbo_approx;
+	border-radius: 100%;
+	width: 15px;
+	height: 15px;
+	margin: 0 auto;
+	left: -44%;
+	bottom: 40%;
+	position: relative;
+	display: block;
+}
+#green {
+	background-color: $color_green_haze_approx;
+	border-radius: 100%;
+	width: 15px;
+	height: 15px;
+	margin: 0 auto;
+	left: -41%;
+	bottom: 99%;
+	position: relative;
+	display: block;
+}
+#screen {
+	background-color: $black;
+	width: 750px;
+	min-height: 450px;
+	border-radius: 2%;
+	margin: 0 auto;
+	padding: 5px;
+}
+.font {
+	color: $white;
+	font-family: $font_0;
+	font-size: 15px;
+	text-align: left;
+	position: static;
+}
+
+.prompt {
+	color: $green;
+}
+
+input {
+    background-color:transparent;
+    border: 0px solid;
+    height:30px;
+    width:260px;
+}
+input:focus {
+    outline:none;
+}
+
