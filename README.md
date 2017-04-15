@@ -1,6 +1,6 @@
 # terminal-about-me
 *What is this?* A different take on an "about me" webpage using React+Redux  
-
+![terminal](media.png)
 
 ## Building the application
 1. `git clone https://github.com/joelbandi/terminal-about-me.git`.
