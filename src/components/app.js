@@ -34,7 +34,9 @@ class App extends Component {
         <div id="screen">
           {this.props.Terminal.toJS().history.map(h => {
             return (
-              <p className="font">{h}</p>
+              h.startsWith('__prompt__')  ? 
+                <p className="font"><span className="font prompt">{prompt} </span>{h.split('__prompt__')[1]}</p> :
+                <p className="font">{h}</p>
             );
           })}
           <span className="font prompt">{prompt} </span>
