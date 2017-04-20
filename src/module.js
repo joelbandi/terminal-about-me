@@ -76,7 +76,7 @@ const module = createModule({
   selector: state => state,
   initialState: fromJS({
     history: [],
-    prompt: '$',
+    prompt: 'user@localhost:~$',
   }),
   transformations: {
     addHistory: {

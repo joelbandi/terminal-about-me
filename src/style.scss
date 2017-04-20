@@ -68,10 +68,11 @@ body {
 #screen {
 	background-color: $black;
 	width: 750px;
-	min-height: 450px;
+	height: 450px;
 	border-radius: 2%;
 	margin: 0 auto;
 	padding: 5px;
+	overflow: auto;
 }
 .font {
 	color: $white;

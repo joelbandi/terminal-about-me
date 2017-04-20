@@ -21,8 +21,7 @@ class App extends Component {
   }
 
   render() {
-
-    const { history } = this.props.Terminal.toJS();
+    const { history,prompt } = this.props.Terminal.toJS();
 
     return (
       <div>
@@ -38,7 +37,7 @@ class App extends Component {
               <p className="font">{h}</p>
             );
           })}
-          <span className="font prompt">user@localhost:~$ </span>
+          <span className="font prompt">{prompt} </span>
           <input className="font" type="text" onKeyPress={this.handleInput.bind(this)} ref="term"/>
         </div>
       </div>
