@@ -20,14 +20,14 @@ const actions = {
       if(commands[cmd] !== undefined) {
         commands[cmd]();
       }else{
-        store.dispatch(module.actions.addHistory('Error: command not found. Type `help` for help'));
+        store.dispatch(module.actions.addHistory('__prompt__ Error: command not found. Type `help` for help'));
       }
   },
 
   openLink: (cmd,link) => {
     
     return () => {
-      store.dispatch(module.actions.addHistory(`user@localhost:~$${cmd}`));
+      store.dispatch(module.actions.addHistory(`__prompt__ ${cmd}`));
       window ? window.open(link, '_blank') : '';
     }
   },
@@ -39,19 +39,19 @@ const actions = {
 
 
   showHelp: () => {
-    store.dispatch(module.actions.addHistory('user@localhost:~$ help'));
-    store.dispatch(module.actions.addHistory('help - this help text'));
-    store.dispatch(module.actions.addHistory("github - view my github profile"));
-    store.dispatch(module.actions.addHistory("source - browse the code for this page"));
-    store.dispatch(module.actions.addHistory("intro - print intro message"));
-    store.dispatch(module.actions.addHistory("web - visit my website"));
-    store.dispatch(module.actions.addHistory("clear - clear screen"));
-    store.dispatch(module.actions.addHistory("linkedin - view my linkedin profile"));
-    store.dispatch(module.actions.addHistory("contact - email me"));
+    store.dispatch(module.actions.addHistory('__prompt__ help'));
+    store.dispatch(module.actions.addHistory('-> help - this help text'));
+    store.dispatch(module.actions.addHistory("-> github - view my github profile"));
+    store.dispatch(module.actions.addHistory("-> source - browse the code for this page"));
+    store.dispatch(module.actions.addHistory("-> intro - print intro message"));
+    store.dispatch(module.actions.addHistory("-> web - visit my website"));
+    store.dispatch(module.actions.addHistory("-> clear - clear screen"));
+    store.dispatch(module.actions.addHistory("-> linkedin - view my linkedin profile"));
+    store.dispatch(module.actions.addHistory("-> contact - email me"));
   },
 
   showIntro: () => {
-    store.dispatch(module.actions.addHistory(`intro`));
+    store.dispatch(module.actions.addHistory(`__prompt__ intro`));
     store.dispatch(module.actions.addHistory(`Hello, I'm ${name}, a ${occupation} currently working in ${company} in the beautiful ${location}.`));
     store.dispatch(module.actions.addHistory(`Type 'help' to see all available commands.`));
   },
