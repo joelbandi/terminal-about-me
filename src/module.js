@@ -10,6 +10,7 @@ import {
   githubUserName,
   linkedinUserName,
   web,
+  resumeLink,
   email
  } from './data';
 
@@ -67,6 +68,7 @@ const commands = {
   'source'  : actions.openLink(`source`,'https://github.com/joelbandi/terminal-about-me'),
   'github'  : actions.openLink(`github`,`http://github.com/${githubUserName}`),
   'web'     : actions.openLink(`web`,`${web}`),
+  'resume'  : actions.openLink(`resume`,`${resumeLink}`),
   'linkedin': actions.openLink(`linkedin`,`http://www.linkedin.com/in/${linkedinUserName}`),
   'contact' : actions.openLink(`contact`,`mailto:${email}`),
 }
