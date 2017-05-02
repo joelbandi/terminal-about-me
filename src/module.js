@@ -38,7 +38,7 @@ const actions = {
     store.dispatch(module.actions.clearHistory());
   },
 
-
+// STEP3: add your corresponsing function inside help function to display help
   showHelp: () => {
     store.dispatch(module.actions.addHistory('__prompt__ help'));
     store.dispatch(module.actions.addHistory('-> help - this help text'));
@@ -46,6 +46,7 @@ const actions = {
     store.dispatch(module.actions.addHistory("-> source - browse the code for this page"));
     store.dispatch(module.actions.addHistory("-> intro - print intro message"));
     store.dispatch(module.actions.addHistory("-> web - visit my website"));
+    store.dispatch(module.actions.addHistory("-> resume - view my resume"));
     store.dispatch(module.actions.addHistory("-> clear - clear screen"));
     store.dispatch(module.actions.addHistory("-> linkedin - view my linkedin profile"));
     store.dispatch(module.actions.addHistory("-> contact - email me"));
