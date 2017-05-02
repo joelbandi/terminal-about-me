@@ -11,7 +11,7 @@
 6. `npm run build` when you want to create a production build in the `/dist` folder.
 
 ## Adding Features and links
-1. Visit `/src/module.js` and follow step1 and step2 in the comments.
+1. Visit `/src/module.js` and follow step1, step2 and step3 as specified in the comments.
 2. Put all your constants in `src/data.js` and export it from there.
 
 See demo here -> [quaint-term.surge.sh](http://quaint-term.surge.sh/)
